@@ -15,4 +15,6 @@ module.exports = app => {
 	router.get("/api/kuaidi",validate(["type","postid"]),controller.api.kuaidi)
 
 	router.get("/api/weather", validate(["?city", "?cityid"]), controller.api.weather)
+
+	router.get("/scrapy/hotnews",controller.scrapy.hotnews)
 }
